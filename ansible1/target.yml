@@ -1,0 +1,6 @@
+--- #my first testing yml book
+- hosts: demo
+  user: ansible
+  become: yes
+  gather_facts: yes
+

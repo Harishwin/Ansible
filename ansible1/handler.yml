@@ -1,0 +1,12 @@
+--- #handler
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install HTTPD service
+      action: yum name=httpd state=present
+      notify: restart HTTPD
+  handlers:
+    - name: restart httpd
+      action: service name=httpd state=restarted

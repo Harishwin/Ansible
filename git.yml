@@ -1,0 +1,11 @@
+---
+- hosts: production
+  user: ansible
+  become: yes
+  tasks:
+
+    - name: install Git
+      package:
+        name: git
+        state: absent
+

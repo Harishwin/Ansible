@@ -1,0 +1,13 @@
+---
+- host: testing
+  user: ansible
+  become: yes
+  tasks:
+    - name: update catche
+      yum:
+        name: "*"
+        state: latest
+    - name: install git
+      package:
+        name: git
+        state: present

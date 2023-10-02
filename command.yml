@@ -1,0 +1,6 @@
+---
+- hosts: production
+  become: yes
+  tasks:
+    - name: create folder
+      command: mkdir okk/okk
